@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Pulse Logger </title>
+
+    <!-- Style Sheet -->
+    <link href="pulseLogger.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&family=Raleway&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+
+<body>
+
+    <div class="main-container"> 
+
+        <!-- Title -->
+        <header> 
+            <h1 class="header"> Pulse Logger </h3>
+        </header>
+
+        <!-- Card -->
+        <main class="card">
+            
+            <!-- Intro -->
+            <div class="flex-row card-intro">
+                <h2 class="intro-text"> Welcome! Select + to add an entry. </h2>
+                <button class="intro-btn"> 
+                    <i class="fa fa-plus"></i> 
+                </button>
+            </div>
+
+            
+            <div class="log-container"> 
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer> 
+            <button class="settings-btn"> 
+                <i class="fa fa-cog"></i>
+            </button>
+        </footer>
+
+        <!-- Pop-Up -->
+        <div class="overlay">
+            <div class="pop-up">
+                <button class="close-btn">
+                    <i class="fa fa-times"></i>
+                </button>
+                <button class="clear-btn">
+                    <h2> Clear All </h2>
+                </button>
+            </div>
+        </div>
+    
+    </div>
+
+    <!--JavaScript-->
+    <script src="pulseLoggerScript.js"></script>
+</body>
+</html>

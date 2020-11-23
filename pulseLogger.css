@@ -1,0 +1,320 @@
+﻿
+/* Color Variables */ 
+:root {
+    --background-color: rgb(255, 217, 206);
+    --module-color: rgba(148, 93, 94, .5);
+    --text-color: rgb(35, 31, 32);
+    --item-color: rgb(244, 235, 235); 
+    --highlight-color: rgb(101, 41, 47); 
+}
+
+/* Global Styles */ 
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+body{
+    color: var(--text-color); 
+    background: var(--background-color); 
+}
+
+h1{
+    font-family: 'MuseoModerno', cursive;
+    font-size: 2.7rem; 
+}
+
+h2{
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1.5rem;
+}
+
+h3{
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1.2rem; 
+}
+
+/* Text for larger screens */ 
+p, option, label{
+    font-family: 'Raleway', sans-serif; 
+    font-size: 1rem; 
+}
+
+/* Text for smaller screens */ 
+@media (max-width: 500px){
+    p, option, label{
+        font-size: 3.5vw; 
+    }
+}
+
+button{
+    background: transparent; 
+    border: none; 
+    outline: none; 
+    transition: transform 1s; 
+}
+
+button:active{
+    color: var(--highlight-color); 
+}
+
+button:hover{
+    transform: scale(1.5, 1.5); 
+}
+
+
+/* Flex Container */ 
+.main-container{
+    display: flex; 
+    flex-flow: column nowrap; 
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-between; 
+}
+
+.flex-row{
+    display: flex;
+    flex-flow: row nowrap; 
+    justify-content: flex-start; 
+    align-content: center; 
+}
+
+/* Card */
+.card{
+    display: flex;
+    flex-flow: column nowrap; 
+
+    width: 75vw; 
+    max-width: 800px; 
+    height: auto; 
+    
+    background-color: var(--module-color); 
+    box-shadow: 3px 3px 4px gray; 
+    border-radius: 10px; 
+}
+
+
+/* Intro */
+.card-intro{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+
+.intro-text{
+    padding: 1.5vw 0 1.6vw 2vw; 
+}
+
+.intro-btn{
+    margin-right: 4vw; 
+    font-size: 2rem;
+}
+
+
+/* Log Items */ 
+.log-container{
+    display: none; 
+    flex-flow: column nowrap; 
+    justify-content: space-between;
+    align-items: center; 
+    align-content: space-between; 
+}
+
+
+.log{
+    display: flex; 
+    flex-flow: column nowrap; 
+    align-items: flex-start; 
+    justify-content: center; 
+    
+    margin-bottom: 3.2vw;
+    
+    width: 68vw; 
+    max-width: 680px; 
+    min-height: 77px; 
+    
+    background-color: var(--item-color); 
+    border-radius: 10px;    
+
+    
+}
+
+
+.log-info{
+    display: flex; 
+    flex-flow: row wrap; 
+    align-items: center; 
+    justify-content: space-between; 
+
+    width: 68vw; 
+    max-width: 680px; 
+    background-color: var(--item-color); 
+
+    border-radius: 10px;    
+
+}
+
+
+.log-form, .entry-form{
+    display: flex; 
+    flex-flow: row nowrap; 
+    align-items: center; 
+    justify-content: space-around; 
+    padding: 2vw; 
+
+    overflow: hidden; 
+    max-width: 680px; 
+}
+
+.date-input{
+    margin-left: 2vw; 
+    height: 3rem; 
+    width: 25vw; 
+    border-radius: 8px; 
+    border-color: var(--module-color); 
+}
+
+.log-info{
+    display: none; 
+}
+
+.log-text{
+    margin-left: 2vw; 
+}
+
+/* Buttons for larger screens */ 
+.log-btn, .date-submit-btn, .pulse-submit-btn, .remove-btn, .settings-btn, .close-btn{
+    margin-right: 4vw; 
+    font-size: 2rem;  
+}
+
+/* Buttons for smaller screens */
+@media (max-width: 500px){
+    .log-btn, .date-submit-btn, .pulse-submit-btn, .remove-btn, .settings-btn, .close-btn{
+        font-size: 4vw; 
+    }
+}
+
+
+/* Entry Info */ 
+.entry-container{
+    display: none;
+    flex-flow: column nowrap; 
+    align-items: flex-start; 
+    justify-content: center; 
+
+    width: 100%; 
+    max-width: 680px; 
+
+    background-color: var(--item-color);
+    border-radius: 8px; 
+}
+
+
+.entry-item{
+    display: flex; 
+    flex-flow: row nowrap; 
+    justify-content: space-between;
+
+    width: 100%; 
+    
+    padding-left: 2.5vw;
+}
+
+/* Entry form- same as log form, see line 149 */
+.entry-form{
+    width: 100%; 
+    max-width: 680px; 
+}
+
+.entry-select{
+
+    height: 2rem;
+    width: 15vw; 
+    margin-left: 1vw; 
+
+    border-radius: 8px; 
+    border-color: var(--module-color); 
+    border-width: 2px; 
+    border-style: inset; 
+
+}
+
+.pulse-input{
+ 
+    height: 2rem; 
+    width: 15vw; 
+
+    margin-left: 1vw; 
+
+    border-radius: 8px; 
+    border-color: var(--module-color); 
+}
+
+.pulse-label{
+    margin-left: 3vw; 
+}
+
+.pulse-submit-btn{
+    margin-left: 1.5vw; 
+}
+
+
+
+/* Footer */ 
+footer{
+    position: fixed; 
+    bottom: 2vw;
+    right: 4vw;
+}
+
+.settings-btn{
+    font-size: 2rem; 
+}
+
+
+/* PopUp */
+.overlay{
+    display: none; 
+    flex-flow: row wrap; 
+    justify-content: center;
+    align-items: center;
+
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(119, 136, 153, 0.7); 
+
+}
+
+.pop-up{
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center;
+    align-items: center; 
+
+    width: 55vw;
+    max-width: 550px; 
+
+    
+
+    background-color: var(--item-color);
+    border-radius: 10px; 
+
+}
+
+.close-btn{
+    align-self: flex-end;
+    padding-top: 2vw; 
+}
+
+.close-btn:hover{
+    transform: none; 
+}
+
+/* Toggle between show and hide */ 
+.show{
+    display: flex; 
+}
+
